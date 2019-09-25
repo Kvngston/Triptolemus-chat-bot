@@ -1,9 +1,11 @@
-package com.triptolemus.hngchatbot
+package com.triptolemus.hngchatbot.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
+import com.triptolemus.hngchatbot.R
 import kotlinx.android.synthetic.main.activity_onboarding.*
 
 class OnBoardingActivity : AppCompatActivity(), View.OnClickListener{
@@ -24,7 +26,13 @@ class OnBoardingActivity : AppCompatActivity(), View.OnClickListener{
     override fun onClick(item: View?) {
         val username: String = usernameEdittext.text.toString().trim()
         if (item!!.id == R.id.startButton){
-            navigateToChatActivity(username)
+            if (username.isNotEmpty()) {
+                navigateToChatActivity(username)
+                usernameEdittext.setText("")
+            } else{
+                usernameEdittext.error
+                Toast.makeText(this, "Please enter a name", Toast.LENGTH_LONG).show()
+            }
         }
     }
 }
