@@ -1,10 +1,9 @@
-package com.triptolemus.hngchatbot.activities
+package com.triptolemus.hngchatbot
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
-import com.triptolemus.hngchatbot.R
 
 class MainActivity : AppCompatActivity() {
 

@@ -4,8 +4,6 @@
     package="com.triptolemus.hngchatbot">
     <uses-permission android:name="android.permission.INTERNET"/>
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher_icon"
@@ -15,14 +13,14 @@
 
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.ChatActivity"
+            android:name=".ChatActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name=".activities.OnBoardingActivity"
+            android:name=".OnBoardingActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
